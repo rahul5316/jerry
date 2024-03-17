@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const intensityManager = new IntensityManager();
   const visualization = document.getElementById('visualization');
-  let historyLog = ''; // Initialize a variable to keep a history log
+  let historyLog = ''; 
 
   document.getElementById('addBtn').addEventListener('click', () => {
     const from = parseInt(document.getElementById('from').value, 10);
@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('to').value = '';
     document.getElementById('amount').value = '';
   });
+
   document.getElementById('setBtn').addEventListener('click', () => {
     const from = parseInt(document.getElementById('from').value, 10);
     const to = parseInt(document.getElementById('to').value, 10);
@@ -37,13 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.getElementById('clearBtn1').addEventListener('click', () => {
-    historyLog = ''; // Clear the history log
-    intensityManager.clear(); // Assuming you have a clear method in your IntensityManager
+    historyLog = '';
+    intensityManager.clear(); 
     updateVisualization();
   });
 
   document.getElementById('finalResultBtn').addEventListener('click', () => {
-    const finalSegments = intensityManager.getSegments(); // Assuming this method exists
+    const finalSegments = intensityManager.getSegments();
     visualization.innerHTML = `<pre>Final segments: ${JSON.stringify(finalSegments)}</pre>`;
   });
 
