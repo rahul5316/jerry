@@ -1,0 +1,86 @@
+body, html {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+#app {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#visualization {
+  margin-top: 20px;
+  position: relative;
+  border: 1px solid #ccc;
+  height: 300px; /* Or any other fixed height */
+  background-color: white;
+  overflow-y: auto; /* Adds vertical scrollbar if content overflows */
+  white-space: pre-wrap; /* Ensures that text wraps and respects new lines */
+  padding: 10px; /* Adds some padding for better readability */
+}
+
+
+.scale {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.axis {
+  position: relative;
+  /* border-top: 2px solid black; */
+  width: 100%;
+  height: 2px;
+}
+
+.segment {
+  position: absolute;
+  height: 50px;
+  background-color: #007bff;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.segment:hover {
+  opacity: 1;
+}
+
+.tooltip {
+  position: absolute;
+  padding: 6px 10px;
+  background: #000;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}

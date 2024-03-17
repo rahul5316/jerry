@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intensity Manager Visualization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <input type="number" id="from" placeholder="From">
+    <input type="number" id="to" placeholder="To">
+    <input type="number" id="amount" placeholder="Amount">
+    <button id="addBtn">Add Intensity</button>
+    <button id="setBtn">Set Intensity</button>
+    <button id="finalResultBtn">Final Result</button>
+    <button id="clearBtn1">Clear Output</button>
+    <button id="clearBtn2">Clear</button>
+
+    <div id="visualization">
+      <div class="scale">
+        <div class="axis" id="axis"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="solution.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
